@@ -70,9 +70,9 @@ const register = async () => {
             username: username.value,
             password: password.value,
         });
-        console.log(response.data);
+        alert("Registered");
     } catch (error) {
-        console.error(error);
+        alert(error);
     }
 };
 
@@ -86,10 +86,10 @@ const login = async () => {
             },
         });
         $cookies.set("accessToken", response.data);
-        console.log("Logged in");
+        alert("Logged in");
         location.reload();
     } catch (error) {
-        console.error(error);
+        alert(error);
     }
 };
 
@@ -101,10 +101,12 @@ const logout = async () => {
                 token: accessToken,
             },
         });
-        console.log("Logged out");
+        alert("Logged out");
         location.reload();
     } catch (error) {
-        console.log(error);
+        alert("Logged out");
+        location.reload();
+        console.error(error);
     }
 };
 </script>
@@ -131,7 +133,7 @@ const logout = async () => {
                     :to="item.route"
                     custom
                 >
-                    <a v-ripple :href="href" @click="navigate">
+                    <a :href="href" @click="navigate">
                         <span class="font-2 geom">{{ item.label }}</span>
                     </a>
                 </router-link>

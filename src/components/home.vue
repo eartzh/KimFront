@@ -63,6 +63,7 @@ const submit = () => {
                 )
                 .then((response) => {
                     console.log(response.data);
+                    alert("Saved");
                 })
                 .catch((error) => {
                     console.error(error);
@@ -72,6 +73,7 @@ const submit = () => {
                 .post(NOTES_API_URL, { title, content }, config)
                 .then((response) => {
                     console.log(response.data);
+                    alert("Saved");
                 })
                 .catch((error) => {
                     console.error(error);
