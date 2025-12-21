@@ -72,7 +72,7 @@ const register = async () => {
         });
         alert("Registered");
     } catch (error) {
-        alert(error);
+        alert(error.response.data);
     }
 };
 
@@ -89,7 +89,7 @@ const login = async () => {
         alert("Logged in");
         location.reload();
     } catch (error) {
-        alert(error);
+        alert(error.response.data);
     }
 };
 
