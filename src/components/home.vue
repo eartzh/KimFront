@@ -95,30 +95,32 @@ const getNotes = () => {
 </script>
 
 <template>
-    <h1 id="mainTitle">Note Something</h1>
-    <div id="container">
-        <InputText
-            type="text"
-            style="border-radius: 10vh; margin-right: 2vh; width: 50%"
-            placeholder="It's so cute nyaaaaaaa~"
-            v-model="inputText"
-        />
-        <Button
-            icon="pi pi-check"
-            style="background-color: var(--p-primary-100)"
-            rounded
-            aria-label="Filter"
-            @click="submit()"
-        />
-        <!-- <Button
-            icon="pi pi-check"
-            style="background-color: var(--p-primary-100)"
-            rounded
-            aria-label="Filter"
-            @click="getNotes()"
-        /> -->
+    <div>
+        <h1 id="mainTitle">Note Something</h1>
+        <div id="container">
+            <InputText
+                type="text"
+                style="border-radius: 10vh; margin-right: 2vh; width: 50%"
+                placeholder="It's so cute nyaaaaaaa~"
+                v-model="inputText"
+            />
+            <Button
+                icon="pi pi-check"
+                style="background-color: var(--p-primary-100)"
+                rounded
+                aria-label="Filter"
+                @click="submit()"
+            />
+            <!-- <Button
+               icon="pi pi-check"
+               style="background-color: var(--p-primary-100)"
+               rounded
+               aria-label="Filter"
+               @click="getNotes()"
+           /> -->
+        </div>
+        <p id="tips">{{ tip }}</p>
     </div>
-    <p id="tips">{{ tip }}</p>
 </template>
 
 <style>
